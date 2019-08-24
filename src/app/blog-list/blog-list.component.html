@@ -1,3 +1,4 @@
-<app-blog-post-tile *ngFor="let post of posts" [post]="post"></app-blog-post-tile>
+<app-blog-post-tile *ngFor="let post of posts[currentPage]" [post]="post"></app-blog-post-tile>
+<app-paginator [numberOfPages]="posts.length" (pageClick)="updatePage($event)"></app-paginator>
 
 
