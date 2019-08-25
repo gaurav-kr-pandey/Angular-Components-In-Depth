@@ -18,6 +18,7 @@ export class BlogPostTileComponent implements OnInit {
 
   ngOnInit() {
     //this.expandSummary=false;
+    //this.post.isFav=false;
     this.fullSummary=this.post.summary;
     this.post.summary = this.truncatePipe.transform(this.fullSummary,30);
   }
@@ -32,5 +33,10 @@ export class BlogPostTileComponent implements OnInit {
     //   this.expandSummary=!this.expandSummary;
     // }
    this.post.summary = this.fullSummary;
+  }
+
+  toggleFav(){
+    this.post.isFav=!this.post.isFav;
+    console.log(this.post.isFav);
   }
 }
