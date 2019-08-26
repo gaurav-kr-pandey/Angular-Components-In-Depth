@@ -1,6 +1,6 @@
 <div class="card decorate" [ngClass]="{'fav':post.isFav}">
   <div class="card-body">
-    <h5 class="card-title" appHighlight="green">{{post.title}}</h5>
+    <h5 class="card-title" appHighlight="30px">{{post.title}}</h5>
     <p class="card-text" (click)="showFullSummary()" >{{post.summary }}</p>
     <a href="#" class="btn btn-primary tile-btn" (click)="toggleFav()">Favourite</a>
     <a href="#" class="btn btn-primary tile-btn">Read</a>

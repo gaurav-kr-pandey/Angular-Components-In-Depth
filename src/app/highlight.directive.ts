@@ -5,12 +5,12 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 })
 export class HighlightDirective {
 
-  @Input('appHighlight') color:string='yellow';
+  @Input('appHighlight') size:string='35px';
   constructor(private element:ElementRef) { }
   
 
   @HostListener('mouseenter') addElement(){
-    this.element.nativeElement.style.fontSize='35px';
+    this.element.nativeElement.style.fontSize=this.size;
   }
 
   @HostListener('mouseleave') removeElement(){
